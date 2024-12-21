@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { LoginIcon, LoginIconBig } from "@/app/components/Icons";
+import { LoginIcon, LoginIconBig } from "@/components/Icons";
 
 const components = [
   {

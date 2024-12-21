@@ -1,5 +1,6 @@
 import localFont from "next/font/local";
 import "./globals.css";
+import Header from "@/components/Header";
 
 const Pinar = localFont({
   src: "../fonts/Pinar-VF.woff2",
@@ -21,7 +22,8 @@ export default function RootLayout({ children }) {
     <html lang="fa" dir="rtl">
       <body
         className={`${Pinar.variable} ${IranYekan.variable} font-IranYekan antialiased overflow-x-hidden`}>
-        {children}
+        <Header></Header>
+        <main>{children}</main>
       </body>
     </html>
   );

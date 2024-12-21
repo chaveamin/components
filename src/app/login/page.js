@@ -51,7 +51,7 @@ export default function Login() {
     <div className="bg-gradient-45 from-pink-200 to-zinc-50 h-screen py-12">
       <div className="max-w-96 relative mx-auto p-10 border-[10px] border-pink-200 rounded-2xl flex flex-col justify-evenly text-center bg-red-50">
         <div className="mb-6">
-          <h2 className="font-bold text-2xl text-zinc-800 mb-2">
+          <h2 className="font-extrabold text-2xl text-zinc-800 mb-2 font-Pinar">
             روز بخیر، امین
           </h2>
           <p className="text-zinc-700 text-sm">
