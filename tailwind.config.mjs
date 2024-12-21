@@ -7,9 +7,12 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      maxWidth: {
+        "8xl": "1520px",
+      },
+      fontFamily: {
+        Pinar: ["var(--font-pinar)"],
+        IranYekan: ["var(--font-iranyekan)"],
       },
     },
   },
