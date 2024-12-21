@@ -7,14 +7,14 @@ export default {
   ],
   theme: {
     extend: {
-      maxWidth: {
-        "8xl": "1520px",
-      },
       fontFamily: {
         Pinar: ["var(--font-pinar)"],
         IranYekan: ["var(--font-iranyekan)"],
       },
+      backgroundImage: {
+        "gradient-45": "linear-gradient(145deg, var(--tw-gradient-stops))",
+      },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/forms")],
 };

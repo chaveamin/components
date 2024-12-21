@@ -1,9 +1,9 @@
 import Link from "next/link";
-import { LoginIcon, LoginIconBig } from "@/components/Icons";
+import { LoginIcon, LoginIconBig } from "@/app/components/Icons";
 
 const components = [
   {
-    href: "#",
+    href: "/login",
     icon: LoginIcon,
     iconBig: LoginIconBig,
     title: "ورود",
