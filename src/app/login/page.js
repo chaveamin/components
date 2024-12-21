@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 function Google() {
   return (
     <svg
@@ -45,8 +48,12 @@ function Facebook() {
     </svg>
   );
 }
+import { EyeOpen, EyeClose } from "@/components/Icons";
 
 export default function Login() {
+  const [isVisible, setIsVisible] = useState(false);
+  const toggleVisibility = () => setIsVisible((prevState) => !prevState);
+
   return (
     <div className="bg-gradient-45 from-pink-200 to-zinc-50 h-screen py-12">
       <div className="max-w-96 relative mx-auto p-10 border-[10px] border-pink-200 rounded-2xl flex flex-col justify-evenly text-center bg-red-50">
@@ -58,17 +65,22 @@ export default function Login() {
             برای ادامه وارد حساب کاربری خود شوید
           </p>
         </div>
-        <div className="*:bg-transparent *:placeholder:text-zinc-400 *:border *:border-zinc-400 *:p-2 *:rounded-lg *:w-72 *:transition-shadow mb-5">
+        <div className="relative mb-5">
           <input
-            className="mb-4 border-zinc-300 shadow-sm focus:border-pink-300 focus:ring focus:ring-pink-200/50"
+            className="mb-4 shadow-sm focus:border-pink-300 focus:ring focus:ring-pink-200/50 bg-transparent placeholder:text-zinc-400 border border-zinc-400 p-2 rounded-lg w-72 transition-shadow"
             type="email"
             placeholder="ایمیل"
           />
           <input
-            className="border-zinc-300 shadow-sm focus:border-pink-300 focus:ring focus:ring-pink-200/50"
-            type="password"
+            className="shadow-sm focus:border-pink-300 focus:ring focus:ring-pink-200/50 bg-transparent placeholder:text-zinc-400 border border-zinc-400 p-2 rounded-lg w-72 transition-shadow"
+            type={isVisible ? "text" : "password"}
             placeholder="رمز عبور"
           />
+          <button
+            className="absolute left-2 cursor-pointer top-[68px]"
+            onClick={toggleVisibility}>
+            {isVisible ? <EyeOpen /> : <EyeClose />}
+          </button>
         </div>
         <div className="flex items-center mb-6">
           <input
