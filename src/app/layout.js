@@ -13,7 +13,7 @@ const IranYekan = localFont({
 });
 
 export const metadata = {
-  title: "login",
+  title: "components",
 };
 
 export default function RootLayout({ children }) {
